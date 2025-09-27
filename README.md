@@ -8,8 +8,7 @@ This repo documents and automates a **Software-In-The-Loop (SITL)** server used 
 - A consistent **TCP port map** for students (15000, 15010, 15020, 15030, 15040, 15050)
 - Optional nginx + systemd service for the web UI
 
-> **Platform:** Ubuntu 22.04 LTS (recommended).  
-> **Why not 24.04?** Toolchain friction and package versions for ArduPilot are smoother on 22.04 at the moment.
+> **Platform:** Ubuntu 24.04 LTS used.  
 
 ---
 
