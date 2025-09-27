@@ -1,0 +1,20 @@
+[Unit]
+Description=SITL Reset Web App (Flask/Gunicorn)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=cyber
+Group=cyber
+Environment=SITLWEB_TOKEN=change-me
+Environment=SITLWEB_RESET=/home/cyber/python-for-uavs-sitl/scripts/reset_one_sitl.sh
+Environment=SITLWEB_TEAMS=6
+Environment=SITLWEB_TCP_BASE=15000
+Environment=SITLWEB_TCP_STEP=10
+WorkingDirectory=/home/cyber/python-for-uavs-sitl
+ExecStart=/opt/sitlweb-venv/bin/gunicorn -w 2 -b 0.0.0.0:8080 sitlweb.wsgi:application
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
