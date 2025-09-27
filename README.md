@@ -14,7 +14,7 @@ This repo documents and automates a **Software-In-The-Loop (SITL)** server used 
 
 ## Quick start (fresh VM)
 
-> Run as a non-root sudo user (e.g., `cyber`). Replace `SERVER_IP` with your server’s LAN IP.
+> Run as a non-root sudo user. Replace `SERVER_IP` with your server’s LAN IP.
 
 ```bash
 sudo apt update
